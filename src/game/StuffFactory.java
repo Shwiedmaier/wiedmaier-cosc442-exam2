@@ -73,6 +73,14 @@ public class StuffFactory {
 		world.addAtEmptyLocation(goblin, depth);
 		return goblin;
 	}
+	public Creature newHobGoblin(int depth, Creature player){
+		Creature HobGoblin = new Creature(world, 'G', AsciiPanel.brightGreen, "Hob Goblin", 99, 30, 10);
+		new GoblinAi(HobGoblin, player);
+		HobGoblin.equip(randomWeapon(depth));
+		HobGoblin.equip(randomArmor(depth));
+		world.addAtEmptyLocation(HobGoblin, depth);
+		return HobGoblin;
+	}
 	
 	public Item newRock(int depth){
 		Item rock = new Item(',', AsciiPanel.yellow, "rock", null);
