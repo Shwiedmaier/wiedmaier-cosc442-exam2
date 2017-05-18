@@ -8,7 +8,7 @@ public class StartScreen implements Screen {
 
 	@Override
 	public void displayOutput(AsciiPanel terminal) {
-		terminal.write("COSC 442 Rougelike Game", 1, 1);
+		terminal.write("Wiedmaier blew it", 1, 1);
 		terminal.writeCenter("-- press [enter] to start --", 22);
 	}
 
